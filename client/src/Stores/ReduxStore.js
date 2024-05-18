@@ -3,8 +3,8 @@ import {
     compose,
     applyMiddleware
 } from "redux";
-import thunk from "redux-thunk";
-import {reducers } from '../Reduces/AuthReduces'
+import {thunk} from "redux-thunk";
+import {reducers } from '../Reduces'
 
 function saveLCStorage(store){
     try {

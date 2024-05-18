@@ -12,7 +12,7 @@ const getUser = async (req, res) => {
             const { password, ...otherDetails } = user._doc;
             res.status(200).json(otherDetails)
         } else {
-            res.status(400).json("not user");
+            res.status(400).json("Không tìm thấy user nào");
         }
     } catch (error) {
         res.status(500).json(error);

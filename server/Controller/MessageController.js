@@ -17,7 +17,7 @@ const addMessage = async (req, res) => {
 const getMessage = async (req, res) => {
     const { chatId } = req.params;
     try {
-        const rs = await messageModel.findOne({ chatId });
+        const rs = await messageModel.find({ chatId });
         res.status(200).json(rs);
     } catch (error) {
         res.status(500).json(error);
